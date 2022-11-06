@@ -29,7 +29,7 @@ docker version
 <image width=300 height=250 src=https://github.com/wushoucheng30510/Docker/blob/main/pictures/docker%20version.png>
     
 ```shell
-    docker run -it ubuntu
+docker run -it ubuntu
 ```
 <image width=300 height=150 src=https://github.com/wushoucheng30510/Docker/blob/main/pictures/docker%20run%20ubuntu.png>
             
