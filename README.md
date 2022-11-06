@@ -18,7 +18,21 @@ Install guidence:
     - Go to [*Docker*](https://docs.docker.com/desktop/install/windows-install/) to install docker Desktop
 
 - Linux
-    Check the video above    
+    ```shell
+    $ sudo apt update
+    $ sudo apt upgrade
+    $ sudo apt autoremove
+    $ sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+    $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    $ apt-key list
+    $ sudo apt-key fingerprint 0EBFCD88
+    $ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release-cs) stable"
+    $ sudo apt update
+    $ sudo apt upgrade
+    $ sudo apt autoremove
+    $ apt show docker-ce
+    $ sudo apt install docker-ce docker-ce-cli containerd.io
+    ```
                 
 ## Verified
             
@@ -32,5 +46,40 @@ docker version
 docker run -it ubuntu
 ```
 <image width=300 height=150 src=https://github.com/wushoucheng30510/Docker/blob/main/pictures/docker%20run%20ubuntu.png>
-            
-            
+
+
+***            
+## Useful command
+- Check docker version
+```shell
+docker version
+```
+
+- Go to Ubuntu
+```shell
+docker run -it ubuntu
+```
+
+- Check docker image in disk
+```shell
+docker image ls
+```
+
+- Pull a docker image
+```shell
+docker image pull $version      ex: docker image pull python:3.7
+```
+
+- create a docker container
+```shell
+nano Dockerfile
+
+#From $env
+#Run mkdir /test
+#copy $file /test
+#CMD["node","/test/$file"]  (run,file)
+```
+
+
+
+
