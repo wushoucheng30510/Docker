@@ -60,14 +60,14 @@ docker version
 docker run -it ubuntu
 ```
 
-- Check docker image in disk
+- Check docker image
 ```shell
 docker image ls
 ```
 
 - Pull a docker image
 ```shell
-docker image pull $version      ex: docker image pull python:3.7
+docker image pull $docker      ex: docker image pull python:3.7
 ```
 
 - create a docker container
@@ -79,6 +79,20 @@ nano Dockerfile
 #copy $file /test
 #CMD["node","/test/$file"]  (run,file)
 ```
+
+- build a docker image ("." is required)
+```shell
+docker image build -t $imageName:v01 .
+```
+
+- run a docker image
+```shell
+docker container run $dockerName
+```
+
+
+
+
 
 
 
