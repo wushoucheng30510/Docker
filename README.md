@@ -85,11 +85,40 @@ nano Dockerfile
 docker image build -t $imageName:v01 .
 ```
 
-- run a docker image
+- run a docker container
 ```shell
 docker container run $dockerName
 ```
 
+- stop a docker container
+```shell
+docker container stop $dockerName
+```
+
+- start a docker container
+```shell
+docker container start $dockerName
+```
+
+- list all the docker container
+```shell
+docker container ls -a
+```
+
+- list the running docker 
+```shell
+docker container ls
+```
+
+- delete a docker container
+```shell
+docker container rm -f $dockerName
+```
+
+- delete all docker containers
+```shell
+docker container prune
+```
 
 
 
